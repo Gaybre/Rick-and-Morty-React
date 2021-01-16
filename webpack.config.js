@@ -1,9 +1,13 @@
+// require("babel-core/register");
+// require("babel-polyfill");
 const path = require('path')
-const htmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  // entry: ["babel-polyfill", "./src/index.js"],
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -27,6 +31,15 @@ module.exports = {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        test: /\.(s*)css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          'css-loader'
+        ]
       }
     ]
   },
@@ -34,6 +47,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'assets/[name].css'
     })
   ]
 }

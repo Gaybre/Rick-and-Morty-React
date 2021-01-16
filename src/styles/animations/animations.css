@@ -1,0 +1,37 @@
+/* texto buscar en el header  */
+.emphasis {
+  animation-duration: 2s;
+  animation-name: emphasis;
+  animation-iteration-count: infinite;
+}
+
+@keyframes emphasis {
+  0% {
+    box-shadow: inset 0 0 3px var(--secondary-color);
+  }
+  50% {
+    box-shadow: inset 0 0 50px var(--secondary-color);
+  }
+  100% {
+    box-shadow: inset 0 0 3px var(--secondary-color);
+  }
+}
+
+/* boton ver mas en las cards */
+.swipe {
+  animation-duration: 1s;
+  animation-name: swipe;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swipe {
+  0% {
+    right: var(--spacing-small);
+  }
+  50% {
+    right: var(--spacing-medium);
+  }
+  100% {
+    right: var(--spacing-small);
+  }
+}

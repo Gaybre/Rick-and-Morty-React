@@ -1,0 +1,41 @@
+:root {
+  --grayscale-1: #fafafa;
+  --grayscale-2: #8398C7;
+  --grayscale-3: #596787;
+  --grayscale-4: #262C3A;
+
+  --primary-rgb-color: 86, 212, 18;
+  --primary-color: #56d412;
+  --secondary-color: #03B3EE;
+  --danger-color: #f33131;
+
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 50px;
+
+  --border-radius: 25px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--grayscale-4);
+  overflow: auto;
+}
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: var(--grayscale-1);
+}
+
+H1,
+H2 {
+  color: var(--secondary-color);
+  text-shadow: 0 0 6px var(--grayscale-4);
+}

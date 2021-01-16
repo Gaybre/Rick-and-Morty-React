@@ -4,6 +4,7 @@
   height: 300px;
   background-image: url('https://res.cloudinary.com/starlink/image/upload/v1610772658/RM/R_M_annxgy.jpg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-bottom-left-radius: calc(var(--border-radius) *2);
   border-bottom-right-radius: calc(var(--border-radius) *2);
@@ -32,4 +33,22 @@
   width: 80%;
   margin: 0 auto;
   margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+}
+
+
+@media screen and (max-width: 768px) {
+  .main__results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: var(--spacing-small);
+    width: 90%;
+    margin-top: var(--spacing-medium);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__results {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -31,7 +31,7 @@ const Home = () => {
       colection: results,
       loading: false
     })
-    const $input = getElementById('inputcharacter')
+    const $input = document.getElementById('inputcharacter')
     $input.value = ''
   }
 

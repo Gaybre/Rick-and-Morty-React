@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  border-top-left-radius: var(--border-radius);
   background-color: var(--grayscale-3);
   transition: 300ms;
   cursor: pointer;
@@ -35,9 +36,9 @@
   text-shadow: 0 0 6px var(--danger-color);
 }
 
-.card__image {
+.card__image,
+.card__image img {
   border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
   width: 100%;
 }
 
@@ -50,4 +51,10 @@
   bottom: var(--spacing-small);
   right: var(--spacing-small);
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card__ver {
+    bottom: var(--spacing-large);
+  }
 }

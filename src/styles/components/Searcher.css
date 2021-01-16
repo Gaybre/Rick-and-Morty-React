@@ -7,7 +7,7 @@
   background-color: rgba(var(--primary-rgb-color), .3);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 8px var(--secondary-color);
-  transform: scale(.01);
+  /* transform: scale(.01); */
   transition: 250ms;
 }
 .searcher:hover {
@@ -38,4 +38,27 @@
   color: var(--secondary-color);
   background-color: var(--grayscale-1);
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .searcher__title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searcher {
+    width: 85%;
+    margin-top: -80px;
+    padding: var(--spacing-medium) 0;
+  }
+  .searcher__title {
+    font-size: 1.8rem;
+  }
+  .searcher__form {
+    width: 80%;
+  }
+  .searcher__form-input {
+    height: 30px;
+  }
 }

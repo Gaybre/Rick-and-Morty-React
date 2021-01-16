@@ -7,7 +7,7 @@
   background-color: rgba(var(--primary-rgb-color), .3);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 8px var(--secondary-color);
-  /* transform: scale(.01); */
+  transform: scale(.01);
   transition: 250ms;
 }
 .searcher:hover {

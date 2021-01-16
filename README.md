@@ -23,7 +23,7 @@ In this App you can fun looking for your favorite character of Rick and Morty.
 
 > If you want to run this proyect in your localhost.
 
-* Clone repo.<br /> `git@github.com:Gaybre/Rick-and-Morty-React.git`
+* Clone repo.<br /> `git clone git@github.com:Gaybre/Rick-and-Morty-React.git`
 * Install dependencies<br /> `npm install`
 * Execute the developer enviroment.<br /> `npm run start`
 

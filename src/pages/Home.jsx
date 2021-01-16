@@ -4,12 +4,15 @@ import { fetchCharacter } from '../fetchCharacter'
 import Searcher from '../components/Searcher'
 import Card from '../components/Card'
 import Loader from '../components/Loader'
+import Modal from '../components/Modal'
 
 const Home = () => {
   const [state, setState] = useState({
     searcher: '',
+    selected: '',
     colection: [],
     loading: false,
+    modalIsOpen: false
   })
 
   const handleChange = ev => {
@@ -35,10 +38,18 @@ const Home = () => {
     $input.value = ''
   }
 
+  const handleCardClik = (character) => {
+    setState({...state,
+      selected: character,
+      modalIsOpen: true
+    })
+  }
+
   const lookingForResults = () => {
     if (state.colection.length) {
       return state.colection.map(item => (
         <Card
+          onClick={() => handleCardClik(item)}
           key={item.id}
           name={item.name}
           picture={item.image}
@@ -65,6 +76,11 @@ const Home = () => {
       <section className="main__results">
         {lookingForResults()}
       </section>
+      <Modal
+        character={state. selected}
+        isOpen={state.modalIsOpen}
+        onClose={() => setState({...state, modalIsOpen: false})}
+      />
     </main>
   )
 }

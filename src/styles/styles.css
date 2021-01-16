@@ -5,6 +5,8 @@
 @import './components/Loader.css';
 @import './components/Searcher.css';
 @import './components/Card.css';
+@import './components/Modal.css';
+@import './components/CardModal.css';
 
 /* pages */
 @import './pages/Home.css';

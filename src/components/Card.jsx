@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Card = ({name, picture, status}) => {
+const Card = ({name, picture, status, onClick}) => {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
       <div className="card__live-indicator">
         {status === 'Alive'
         ? <h3 className="card__live-indicator--alive">

@@ -8,6 +8,7 @@
   --primary-color: #56d412;
   --secondary-color: #03B3EE;
   --danger-color: #f33131;
+  --warning-color: #F7EC48;
 
   --spacing-small: 10px;
   --spacing-medium: 20px;
@@ -183,6 +184,11 @@ H2 {
   text-shadow: 0 0 6px var(--danger-color);
 }
 
+.card__live-indicator--unknown {
+  color: var(--warning-color);
+  text-shadow: 0 0 6px var(--warning-color);
+}
+
 .card__image,
 .card__image img {
   border-top-left-radius: var(--border-radius);
@@ -221,11 +227,11 @@ H2 {
 .modal__container {
   position: relative;
   top:10rem;
-  width: 500px;
+  width: 60%;
   padding: var(--spacing-medium);
   padding-top: var(--spacing-large);
   border-radius: calc(var(--border-radius) /2);
-  background-color: var(--grayscale-2);
+  background-color: var(--grayscale-3);
 }
 
 .modal__close {
@@ -233,16 +239,51 @@ H2 {
   top: 0;
   right: 0;
   padding: var(--spacing-small);
-  border-radius: calc(var(--border-radius) /2);
-  border: 2px solid var(--grayscale-3);
+  border-radius: calc(var(--border-radius) /3);
+  border: 2px solid var(--grayscale-4);
   background-color: transparent;
 }
 
 .modal__close:hover {
-  background-color: var(--grayscale-3);
+  background-color: var(--grayscale-4);
   color: var(--grayscale-1);
 }
 
+
+@media screen and (max-width: 600px) {
+  .modal__container {
+    top:10rem;
+    width: 80%;
+  }
+}
+
+.character {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+}
+.character__image img {
+  width: 100%;
+  border-radius: calc(var(--border-radius) /3);
+}
+
+.character__details {
+  font-size: 1.2rem;
+}
+
+.character__details p {
+  line-height: 2rem;
+  color: var(--grayscale-4);
+}
+
+.character__details span {
+  font-weight: bold;
+}
+
+.main > h2 {
+  text-align: center;
+}
 
 .main__header {
   position: relative;
@@ -282,6 +323,19 @@ H2 {
   margin-bottom: var(--spacing-large);
 }
 
+.main__results-empty {
+  grid-column: span 4;
+  text-align: center;
+}
+
+.main__results-empty img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10rem;
+  margin: 0 auto;
+}
 
 @media screen and (max-width: 768px) {
   .main__results {

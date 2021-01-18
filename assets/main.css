@@ -210,12 +210,6 @@ H2 {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .card__ver {
-    bottom: var(--spacing-large);
-  }
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -266,7 +260,7 @@ H2 {
 
 @media screen and (max-width: 768px) {
   .modal__container {
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -346,6 +340,7 @@ H2 {
 
 @media screen and (max-width: 600px) {
   .character {
+    width: 95%;
     margin-top: 6rem;
   }
   .character__image {

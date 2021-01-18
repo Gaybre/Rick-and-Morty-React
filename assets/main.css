@@ -354,6 +354,7 @@ H2 {
     font-size: 1.7rem;
   }
   .character__details p {
+    margin-left: 0;
     line-height: 1.3rem;
     font-size: .8;
   }

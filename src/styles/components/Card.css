@@ -36,6 +36,11 @@
   text-shadow: 0 0 6px var(--danger-color);
 }
 
+.card__live-indicator--unknown {
+  color: var(--warning-color);
+  text-shadow: 0 0 6px var(--warning-color);
+}
+
 .card__image,
 .card__image img {
   border-top-left-radius: var(--border-radius);
@@ -44,6 +49,7 @@
 
 .card__name {
   margin: var(--spacing-small);
+  margin-right: calc(var(--spacing-medium) *3);
 }
 
 .card__ver {
@@ -51,10 +57,4 @@
   bottom: var(--spacing-small);
   right: var(--spacing-small);
   display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .card__ver {
-    bottom: var(--spacing-large);
-  }
 }

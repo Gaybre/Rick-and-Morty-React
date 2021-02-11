@@ -15,6 +15,7 @@ const Modal = ({character, isOpen, onClose}) => {
           className="modal__close">
           x
         </button>
+        <img className="rotate" src="https://res.cloudinary.com/starlink/image/upload/v1610938380/RM/portal_xw9b59.png" atl="portal" />
         <CardModal
           character={character}
         />

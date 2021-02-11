@@ -8,8 +8,13 @@ const Card = ({name, picture, status, onClick}) => {
         ? <h3 className="card__live-indicator--alive">
             Alive
           </h3>
-        : <h3 className="card__live-indicator--dead">
+        : status === 'Dead'
+        ? <h3 className="card__live-indicator--dead">
             Dead
+          </h3>
+        :
+          <h3 className="card__live-indicator--unknown">
+            Unknown
           </h3>
         }
       </div>

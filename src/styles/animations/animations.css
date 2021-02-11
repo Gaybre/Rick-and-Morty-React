@@ -35,3 +35,14 @@
     right: var(--spacing-small);
   }
 }
+
+/* portal del modal */
+.rotate {
+  animation: 100s;
+  animation-name: rotate360;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}

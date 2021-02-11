@@ -12,6 +12,7 @@ const Home = () => {
     selected: '',
     colection: [],
     loading: false,
+    thereIsError: null,
     modalIsOpen: false
   })
 
@@ -26,16 +27,33 @@ const Home = () => {
     ev.preventDefault()
     setState({
       ...state,
+      thereIsError: null,
       loading: true
     })
-    const results = await fetchCharacter(state.searcher)
-    setState({
-      ...state,
-      colection: results,
-      loading: false
-    })
+    const data = await fetchCharacter(state.searcher, setState)
+    resultsValidation(data)
     const $input = document.getElementById('inputcharacter')
     $input.value = ''
+    $input.blur()
+  }
+
+  const resultsValidation = data => {
+    if(data.results) {
+      setState({
+        ...state,
+        colection: data.results,
+        thereIsError: null,
+        loading: false
+      })
+    }
+    else if(data.error) {
+      setState({
+        ...state,
+        colection: [],
+        thereIsError: data.error,
+        loading: false
+      })
+    }
   }
 
   const handleCardClik = (character) => {
@@ -57,7 +75,11 @@ const Home = () => {
         />
       ))
     } else {
-      console.log('no hay nada')
+      return (
+        <section className="main__results-empty">
+          <img src="https://res.cloudinary.com/starlink/image/upload/v1610865603/RM/r-and-m-a_gwdtwv.png" alt="rick-and-morty-empty-cards" />
+        </section>
+      )
     }
   }
 
@@ -73,6 +95,7 @@ const Home = () => {
         handleSubmit={handleSubmit}
       />
       {state.loading && <Loader />}
+      {state.thereIsError && <h2>No se encontraron coincidencias</h2>}
       <section className="main__results">
         {lookingForResults()}
       </section>

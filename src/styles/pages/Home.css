@@ -1,3 +1,7 @@
+.main > h2 {
+  text-align: center;
+}
+
 .main__header {
   position: relative;
   width: 100%;
@@ -36,6 +40,19 @@
   margin-bottom: var(--spacing-large);
 }
 
+.main__results-empty {
+  grid-column: span 4;
+  text-align: center;
+}
+
+.main__results-empty img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10rem;
+  margin: 0 auto;
+}
 
 @media screen and (max-width: 768px) {
   .main__results {

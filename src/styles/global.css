@@ -8,12 +8,16 @@
   --primary-color: #56d412;
   --secondary-color: #03B3EE;
   --danger-color: #f33131;
+  --warning-color: #F7EC48;
 
   --spacing-small: 10px;
   --spacing-medium: 20px;
   --spacing-large: 50px;
 
   --border-radius: 25px;
+
+  --details-modal: 4
+  --character-modal: 5
 }
 
 * {
